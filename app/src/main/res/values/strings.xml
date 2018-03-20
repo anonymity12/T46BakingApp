@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">T46BakingApp</string>
+    <string name="empty_data">Empty data</string>
+    <string name="Servings">Servings</string>
+    <string name="recipe_name">RecipeName</string>
+    <string name="step_id">stepId</string>
+
+    <!--SyncAdapter-->
+    <string name="api_url">https://s3.cn-north-1.amazonaws.com.cn/static-documents/nd801/ProjectResources/Baking/baking-cn.json</string>
+    <string name="n">\n</string>
+    <string name="quantity">quantity:</string>
+    <string name="measure">measure:</string>
+    <string name="ingredient">ingredient:</string>
+    <string name="ingredients_title">Ingredients</string>
+</resources>

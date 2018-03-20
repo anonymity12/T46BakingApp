@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="baking" />
+    <version value="2" />
+    <list>
+        <mapping class="com.example.thinkpad.t46bakingapp.data.Recipe" />
+        <mapping class="com.example.thinkpad.t46bakingapp.data.Step" />
+    </list>
+</litepal>
