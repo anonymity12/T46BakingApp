@@ -14,6 +14,10 @@ import com.example.thinkpad.t46bakingapp.view.RecipeActivity;
  * Created by thinkpad on 2018/1/29.
  */
 
+/**
+ * 现在可以放置一个2x2的小组件在home了，点击会进入MainActivity.
+ * */
+
 public class BakingAppWidget extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
