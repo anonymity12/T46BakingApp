@@ -4,6 +4,8 @@ import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
+import android.support.test.espresso.IdlingRegistry;
+import android.support.test.espresso.IdlingResource;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.thinkpad.t46bakingapp.R;
 import com.example.thinkpad.t46bakingapp.data.Recipe;
+import com.example.thinkpad.t46bakingapp.data.RecipeIdlingResource;
 import com.example.thinkpad.t46bakingapp.util.Constants;
 import com.example.thinkpad.t46bakingapp.util.Util;
 import com.example.thinkpad.t46bakingapp.util.network.SyncAdapter;
@@ -32,6 +35,8 @@ public class RecipeActivity extends AppCompatActivity implements LoaderManager.L
 
     private List<Recipe> recipeList;
     private RecipeAdapter recipeAdapter;
+    private RecipeIdlingResource idlingResource;
+
     @BindView(R.id.recycler_view_recipe)
     RecyclerView recipeRecyclerView;
     TextView emptyPrompt;
@@ -99,5 +104,12 @@ public class RecipeActivity extends AppCompatActivity implements LoaderManager.L
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
 
+    }
+
+    public IdlingResource getIdlingResource() {
+        if (idlingResource == null) {
+            idlingResource = new RecipeIdlingResource();
+        }
+        return idlingResource;
     }
 }
